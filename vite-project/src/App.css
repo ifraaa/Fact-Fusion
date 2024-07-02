@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body {
+  background-color: black;
+}
+.logo {
+  height: 90px;
+  position: absolute;
+  left: 22px;
+  top: 22px;
+}
+.learned {
+  position: absolute;
+  color: white;
+  left: 7rem;
+  top: 8px;
+  font-family: "Coiny", cursive;
+  font-weight: 1200;
+}
+.share-btn {
+  position: absolute;
+  right: 7rem;
+  top: 2.5rem;
+  font-family: "Coiny", cursive;
+  font-weight: 1200;
+  color: white;
+  background-color: black;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transition: background 0.3s, transform 0.3s;
+  border: none;
+}
+.share-btn:hover {
+  background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transform: scale(1.05);
+}
