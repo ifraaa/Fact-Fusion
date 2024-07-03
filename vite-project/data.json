@@ -1,0 +1,82 @@
+[
+  {
+    "fact": "The first computer virus was created in 1983 by Fred Cohen.",
+    "source": "source.html",
+    "likeCount": 34,
+    "mindBlownCount": 20,
+    "falseCount": 1,
+    "category": "TECHNOLOGY"
+  },
+  {
+    "fact": "The Great Wall of China is over 13,000 miles long.",
+    "source": "source.html",
+    "likeCount": 50,
+    "mindBlownCount": 30,
+    "falseCount": 3,
+    "category": "HISTORY"
+  },
+  {
+    "fact": "Water makes up about 60% of the human body.",
+    "source": "source.html",
+    "likeCount": 45,
+    "mindBlownCount": 25,
+    "falseCount": 2,
+    "category": "SCIENCE"
+  },
+  {
+    "fact": "Walt Disney holds the record for the most Academy Awards, with 22 wins.",
+    "source": "source.html",
+    "likeCount": 60,
+    "mindBlownCount": 35,
+    "falseCount": 2,
+    "category": "ENTERTAINMENT"
+  },
+  {
+    "fact": "The United Nations was founded in 1945 after World War II.",
+    "source": "source.html",
+    "likeCount": 50,
+    "mindBlownCount": 30,
+    "falseCount": 1,
+    "category": "SOCIETY"
+  },
+  {
+    "fact": "The heart beats about 100,000 times a day.",
+    "source": "source.html",
+    "likeCount": 55,
+    "mindBlownCount": 28,
+    "falseCount": 2,
+    "category": "HEALTH"
+  },
+  {
+    "fact": "The stock market crash of 1929 triggered the Great Depression.",
+    "source": "source.html",
+    "likeCount": 40,
+    "mindBlownCount": 20,
+    "falseCount": 1,
+    "category": "FINANCE"
+  },
+  {
+    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
+    "source": "source.html",
+    "likeCount": 65,
+    "mindBlownCount": 40,
+    "falseCount": 2,
+    "category": "NEWS"
+  },
+  {
+    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
+    "source": "source.html",
+    "likeCount": 65,
+    "mindBlownCount": 40,
+    "falseCount": 2,
+    "category": "NEWS"
+  },
+  {
+    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
+    "source": "source.html",
+    "likeCount": 65,
+    "mindBlownCount": 40,
+    "falseCount": 2,
+    "category": "NEWS"
+  }
+]

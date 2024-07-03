@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Coiny&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,500;1,500&display=swap");
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,7 +7,10 @@
   text-align: center;
 }
 body {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.904);
+}
+.header {
+  margin-bottom: 6rem;
 }
 .logo {
   height: 90px;
@@ -18,14 +22,15 @@ body {
   position: absolute;
   color: white;
   left: 7rem;
-  top: 8px;
+  top: 24px;
   font-family: "Coiny", cursive;
   font-weight: 1200;
 }
 .share-btn {
   position: absolute;
+  height: 40px;
   right: 7rem;
-  top: 2.5rem;
+  top: 3rem;
   font-family: "Coiny", cursive;
   font-weight: 1200;
   color: white;
@@ -38,7 +43,290 @@ body {
   transition: background 0.3s, transform 0.3s;
   border: none;
 }
+.post-btn {
+  font-family: "Coiny", cursive;
+  font-weight: 1200;
+  color: white;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transition: background 0.3s, transform 0.3s;
+  border: none;
+}
+.post-btn:hover {
+  background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+  transform: scale(1.05);
+  cursor: pointer;
+}
 .share-btn:hover {
   background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
   transform: scale(1.05);
+  cursor: pointer;
+}
+.facts-list {
+  color: rgb(206, 203, 203);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #292524;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 12rem;
+  width: 20rem;
+  padding: 8px;
+  box-sizing: border-box;
+  flex: 0 1 calc(33.333% - 20px);
+  position: relative; /* Added */
+}
+
+p.desc {
+  text-align: center;
+  font-family: "Wittgenstein", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(206, 203, 203);
+}
+.source {
+  color: #9b9491;
+  position: absolute;
+  left: 2rem;
+  bottom: 10px;
+}
+p.category-text {
+  font-family: "Coiny", cursive;
+  font-size: larger;
+}
+
+.category-TECHNOLOGY {
+  color: rgba(136, 136, 212, 0.849);
+}
+.category-HISTORY {
+  color: rgb(206, 118, 118);
+}
+
+.category-ENTERTAINMENT {
+  color: rgb(206, 106, 156);
+}
+
+.category-SCIENCE {
+  color: rgb(119, 190, 105);
+}
+
+.category-SOCIETY {
+  color: rgb(219, 177, 97);
+}
+.category-HEALTH {
+  color: rgb(121, 183, 187);
+}
+.category-FINANCE {
+  color: rgb(214, 70, 70);
+}
+.category-NEWS {
+  color: rgb(142, 78, 202);
+}
+.category-technology {
+  background-color: rgba(136, 136, 212, 0.849);
+}
+.category-history {
+  background-color: rgb(206, 118, 118);
+}
+
+.category-entertainment {
+  background-color: rgb(206, 106, 156);
+}
+
+.category-science {
+  background-color: rgb(119, 190, 105);
+}
+
+.category-society {
+  background-color: rgb(219, 177, 97);
+}
+.category-health {
+  background-color: rgb(121, 183, 187);
+}
+.category-finance {
+  background-color: rgb(214, 70, 70);
+}
+.category-news {
+  background-color: rgb(142, 78, 202);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.thumb {
+  width: 20px;
+  height: 20px;
+}
+
+.like-button {
+  background-color: #4e4644;
+  color: white;
+  border: none;
+  padding: 6px 12px; /* Increased padding for better alignment */
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 9.5rem;
+}
+
+.like-button:hover {
+  background-color: #3f3836;
+}
+
+.like-count {
+  font-size: 0.9rem;
+}
+
+.mind {
+  width: 20px;
+  height: 20px;
+}
+
+.mind-button {
+  background-color: #4e4644;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 5rem;
+}
+
+.mind-button:hover {
+  background-color: #3f3836;
+}
+
+.mind-count {
+  font-size: 0.9rem;
+}
+
+.false {
+  width: 20px;
+  height: 20px;
+}
+
+.false-button {
+  background-color: #4e4644;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+  position: absolute;
+  bottom: 10px;
+  right: 0.5rem;
+}
+
+.false-button:hover {
+  background-color: #3f3836;
+}
+
+.false-count {
+  font-size: 1rem;
+}
+.choice {
+  font-family: "Coiny", cursive;
+  border: 2px solid rgb(173, 169, 169);
+  margin-top: 4rem;
+  padding: 1rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  color: rgb(206, 203, 203);
+  width: 99%;
+  height: 110px;
+  justify-content: center;
+}
+.categories {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.categories li {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 5px;
+  margin: 0px 5px;
+  color: black;
+  width: 10rem;
+  font-size: large;
+}
+.categories li:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.fact-form {
+  background-color: #292524;
+  height: 22rem;
+  width: 60rem;
+  padding: 2rem;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+#desc {
+  background-color: #292524;
+  background-color: #473c3c;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 50rem;
+  margin-top: 30px;
+  padding: 1rem;
+  border: none;
+  color: white;
+}
+#src {
+  border: none;
+  background-color: #292524;
+  background-color: #473c3c;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  width: 50rem;
+  margin-top: 30px;
+  padding: 1rem;
+  color: white;
+}
+.h2-text {
+  font-family: "Coiny", cursive;
+}
+.filtered-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
