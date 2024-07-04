@@ -7,6 +7,18 @@ function App() {
   const [facts, setfacts] = useState([]);
   const [like, setlike] = useState(false);
   const [mind, setmind] = useState(false);
+  const [falsebtn, setfalse] = useState(false);
+  const [factDescription, setFactDescription] = useState("");
+  const [factSource, setFactSource] = useState("");
+  const [ncategory, setncategory] = useState("");
+  const [selectedFactCategory, setSelectedFactCategory] = useState("");
+
+  const newfactcategory = (e) => {
+    const cat = e.target.id;
+    setncategory(cat);
+    setSelectedFactCategory(cat);
+    console.log(cat);
+  };
 
   const handlecategorychange = (e) => {
     const cat = e.target.id;
@@ -60,7 +72,7 @@ function App() {
             : fact
         )
       );
-      setlike((prev) => !prev);
+      setmind((prev) => !prev);
     } catch (err) {
       console.log(err);
     }
@@ -80,13 +92,45 @@ function App() {
             : fact
         )
       );
-      setlike((prev) => !prev);
+      setfalse((prev) => !prev);
     } catch (err) {
       console.log(err);
     }
   };
   const getCategoryClass = (category) => `category-${category}`;
 
+  const handleDescriptionChange = (e) => {
+    setFactDescription(e.target.value);
+  };
+
+  const handleSourceChange = (e) => {
+    setFactSource(e.target.value);
+  };
+
+  const handlepostfact = async () => {
+    if (!factDescription || !factSource || !ncategory) {
+      alert("Please fill out all fields.");
+      return;
+    }
+    try {
+      const response = await axios.post("http://localhost:3000/postfact", {
+        fact: factDescription,
+        source: factSource,
+        category: ncategory.toUpperCase(),
+        likeCount: 0,
+        mindBlownCount: 0,
+        falseCount: 0,
+      });
+      setFactDescription("");
+      setFactSource("");
+      setncategory("");
+      setSelectedFactCategory("");
+      setsharebtn(false);
+      setlike((prev) => !prev);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   useEffect(() => {
     getfacts();
   }, []);
@@ -98,6 +142,10 @@ function App() {
   useEffect(() => {
     getfacts();
   }, [mind]);
+
+  useEffect(() => {
+    getfacts();
+  }, [falsebtn]);
   return (
     <>
       <div className="header">
@@ -115,83 +163,125 @@ function App() {
       </div>
       {sharebtn === true ? (
         <div className="fact-form">
-          <h1>SHARE YOUR FACTS WITH US!!</h1>
+          <h1>SHARE A FACT WITH US!!</h1>
           <textarea
             name="desc"
             id="desc"
             placeholder="Enter your fact here"
+            value={factDescription}
+            onChange={handleDescriptionChange}
           ></textarea>
-          <input id="src" type="text" placeholder="enter a valid source" />
+          <input
+            id="src"
+            type="text"
+            placeholder="enter a valid source"
+            value={factSource}
+            onChange={handleSourceChange}
+          />
           <div>
             <h2 style={{ color: "white" }}>PICK A CATEGORY</h2>
             <ol className="categories">
               <li
-                id="tech"
+                id="technology"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgba(136, 136, 212, 0.849)",
+                  backgroundColor:
+                    selectedFactCategory === "technology"
+                      ? "white"
+                      : "rgba(136, 136, 212, 0.849)",
                 }}
               >
                 TECHNOLOGY
               </li>
               <li
-                id="hist"
+                id="history"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(206, 118, 118)",
+                  backgroundColor:
+                    selectedFactCategory === "history"
+                      ? "white"
+                      : "rgb(206, 118, 118)",
                 }}
               >
                 HISTORY
               </li>
               <li
-                id="sci"
+                id="science"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(119, 190, 105)",
+                  backgroundColor:
+                    selectedFactCategory === "science"
+                      ? "white"
+                      : "rgb(119, 190, 105)",
                 }}
               >
                 SCIENCE
               </li>
               <li
-                id="enter"
+                id="entertainment"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(206, 106, 156)",
+                  backgroundColor:
+                    selectedFactCategory === "entertainment"
+                      ? "white"
+                      : "rgb(206, 106, 156)",
                 }}
               >
                 ENTERTAINMENT
               </li>
               <li
                 id="society"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(219, 177, 97)",
+                  backgroundColor:
+                    selectedFactCategory === "society"
+                      ? "white"
+                      : "rgb(219, 177, 97)",
                 }}
               >
                 SOCIETY
               </li>
               <li
                 id="health"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(121, 183, 187)",
+                  backgroundColor:
+                    selectedFactCategory === "health"
+                      ? "white"
+                      : "rgb(121, 183, 187)",
                 }}
               >
                 HEALTH
               </li>
               <li
                 id="finance"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(214, 70, 70)",
+                  backgroundColor:
+                    selectedFactCategory === "finance"
+                      ? "white"
+                      : "rgb(214, 70, 70)",
                 }}
               >
                 FINANCE
               </li>
               <li
                 id="news"
+                onClick={newfactcategory}
                 style={{
-                  backgroundColor: "rgb(142, 78, 202)",
+                  backgroundColor:
+                    selectedFactCategory === "news"
+                      ? "white"
+                      : "rgb(142, 78, 202)",
                 }}
               >
                 NEWS
               </li>
             </ol>
           </div>
-          <button className="post-btn">POST</button>
+          <button onClick={handlepostfact} className="post-btn">
+            POST
+          </button>
         </div>
       ) : (
         <>

@@ -1,82 +1,130 @@
 [
   {
-    "fact": "The first computer virus was created in 1983 by Fred Cohen.",
-    "source": "source.html",
-    "likeCount": 34,
-    "mindBlownCount": 20,
-    "falseCount": 1,
-    "category": "TECHNOLOGY"
+    "fact": "The first 1GB hard drive, introduced by IBM in 1980, weighed over 500 pounds and cost $40,000.",
+    "source": "https://www.ibm.com/ibm/history/exhibits/storage/storage_1.html",
+    "category": "TECHNOLOGY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "The Great Wall of China is over 13,000 miles long.",
-    "source": "source.html",
-    "likeCount": 50,
-    "mindBlownCount": 30,
-    "falseCount": 3,
-    "category": "HISTORY"
+    "fact": "The term 'computer bug' was first used by Grace Hopper in 1947 after a moth was found in a computer relay.",
+    "source": "https://www.history.com/topics/inventions/grace-hopper",
+    "category": "TECHNOLOGY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "Water makes up about 60% of the human body.",
-    "source": "source.html",
-    "likeCount": 45,
-    "mindBlownCount": 25,
-    "falseCount": 2,
-    "category": "SCIENCE"
+    "fact": "The Great Pyramid of Giza was the tallest man-made structure in the world for over 3,800 years.",
+    "source": "https://www.britannica.com/topic/Great-Pyramid-of-Giza",
+    "category": "HISTORY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "Walt Disney holds the record for the most Academy Awards, with 22 wins.",
-    "source": "source.html",
-    "likeCount": 60,
-    "mindBlownCount": 35,
-    "falseCount": 2,
-    "category": "ENTERTAINMENT"
+    "fact": "Julius Caesar was kidnapped by pirates in 75 BCE and demanded a higher ransom for himself because he believed he was worth more.",
+    "source": "https://www.history.com/topics/ancient-history/julius-caesar",
+    "category": "HISTORY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "The United Nations was founded in 1945 after World War II.",
-    "source": "source.html",
-    "likeCount": 50,
-    "mindBlownCount": 30,
-    "falseCount": 1,
-    "category": "SOCIETY"
+    "fact": "Water covers about 71% of the Earth's surface.",
+    "source": "https://www.nationalgeographic.com/environment/article/ocean",
+    "category": "SCIENCE",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "The heart beats about 100,000 times a day.",
-    "source": "source.html",
-    "likeCount": 55,
-    "mindBlownCount": 28,
-    "falseCount": 2,
-    "category": "HEALTH"
+    "fact": "Honey never spoils; archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still edible.",
+    "source": "https://www.britannica.com/science/honey",
+    "category": "SCIENCE",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "The stock market crash of 1929 triggered the Great Depression.",
-    "source": "source.html",
-    "likeCount": 40,
-    "mindBlownCount": 20,
-    "falseCount": 1,
-    "category": "FINANCE"
+    "fact": "The longest-running TV show in the U.S. is 'The Simpsons,' which began airing in 1989.",
+    "source": "https://www.thewrap.com/the-simpsons-longest-running-tv-show-what-you-need-to-know/",
+    "category": "ENTERTAINMENT",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
-    "source": "source.html",
-    "likeCount": 65,
-    "mindBlownCount": 40,
-    "falseCount": 2,
-    "category": "NEWS"
+    "fact": "The Academy Awards, also known as the Oscars, have been held annually since 1929.",
+    "source": "https://www.oscars.org/about",
+    "category": "ENTERTAINMENT",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
-    "source": "source.html",
-    "likeCount": 65,
-    "mindBlownCount": 40,
-    "falseCount": 2,
-    "category": "NEWS"
+    "fact": "The average person spends about 2 hours and 31 minutes on social media every day.",
+    "source": "https://www.statista.com/statistics/433871/social-media-usage-worldwide/",
+    "category": "SOCIETY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   },
   {
-    "fact": "In 2023, scientists detected gravitational waves from a binary black hole merger.",
-    "source": "source.html",
-    "likeCount": 65,
-    "mindBlownCount": 40,
-    "falseCount": 2,
-    "category": "NEWS"
+    "fact": "The concept of 'retirement' as we know it today was popularized in the early 20th century with the introduction of Social Security in the U.S.",
+    "source": "https://www.ssa.gov/history/briefhistory3.html",
+    "category": "SOCIETY",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "Regular physical activity can improve mental health by reducing symptoms of depression and anxiety.",
+    "source": "https://www.who.int/news-room/fact-sheets/detail/physical-activity",
+    "category": "HEALTH",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "The human body has 206 bones, which are all connected by joints.",
+    "source": "https://www.britannica.com/science/human-skeleton",
+    "category": "HEALTH",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "The global debt reached a record $300 trillion in 2021.",
+    "source": "https://www.imf.org/en/Blogs/Articles/2021/10/21-global-debt-reaches-a-record-300-trillion",
+    "category": "FINANCE",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "In 2021, the most valuable company in the world was Apple, with a market capitalization of over $2 trillion.",
+    "source": "https://www.cnbc.com/2021/09/07/apple-market-cap-2-trillion-dollar.html",
+    "category": "FINANCE",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "The first news broadcast on television in the U.S. was on July 1, 1941.",
+    "source": "https://www.pbs.org/wnet/americanmasters/television-the-first-news-broadcasts/",
+    "category": "NEWS",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
+  },
+  {
+    "fact": "The term 'fake news' became prominent during the 2016 U.S. Presidential Election.",
+    "source": "https://www.bbc.com/news/uk-41158248",
+    "category": "NEWS",
+    "likeCount": 0,
+    "mindBlownCount": 0,
+    "falseCount": 0
   }
 ]

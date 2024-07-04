@@ -78,12 +78,12 @@ body {
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  height: 12rem;
+  height: 16rem;
   width: 20rem;
   padding: 8px;
   box-sizing: border-box;
   flex: 0 1 calc(33.333% - 20px);
-  position: relative; /* Added */
+  position: relative;
 }
 
 p.desc {
