@@ -5,6 +5,8 @@ function App() {
   const [selectedcategory, setcategory] = useState("");
   const [sharebtn, setsharebtn] = useState(false);
   const [facts, setfacts] = useState([]);
+  const [like, setlike] = useState(false);
+  const [mind, setmind] = useState(false);
 
   const handlecategorychange = (e) => {
     const cat = e.target.id;
@@ -24,13 +26,78 @@ function App() {
       console.log(err);
     }
   };
+  const incrementlikes = async (fact_id) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/incrementlikes/${fact_id}`
+      );
+      const updatedFact = response.data;
 
+      setfacts((prevFacts) =>
+        prevFacts.map((fact) =>
+          fact._id === fact_id
+            ? { ...fact, likeCount: updatedFact.likeCount }
+            : fact
+        )
+      );
+      setlike((prev) => !prev);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const incrementmindemoji = async (fact_id) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/incrementmindemoji/${fact_id}`
+      );
+      const updatedFact = response.data;
+
+      setfacts((prevFacts) =>
+        prevFacts.map((fact) =>
+          fact._id === fact_id
+            ? { ...fact, mindBlownCount: updatedFact.mindBlownCount }
+            : fact
+        )
+      );
+      setlike((prev) => !prev);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  const incrementfalsecount = async (fact_id) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:3000/incrementfalsecount/${fact_id}`
+      );
+      const updatedFact = response.data;
+
+      setfacts((prevFacts) =>
+        prevFacts.map((fact) =>
+          fact._id === fact_id
+            ? { ...fact, mindBlownCount: updatedFact.mindBlownCount }
+            : fact
+        )
+      );
+      setlike((prev) => !prev);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const getCategoryClass = (category) => `category-${category}`;
 
   useEffect(() => {
     getfacts();
   }, []);
 
+  useEffect(() => {
+    getfacts();
+  }, [like]);
+
+  useEffect(() => {
+    getfacts();
+  }, [mind]);
   return (
     <>
       <div className="header">
@@ -130,7 +197,7 @@ function App() {
         <>
           <div className="facts-list">
             {facts.map((fact, index) => (
-              <div className="card">
+              <div className="card" key={fact._id}>
                 <p
                   className={`category-text ${getCategoryClass(fact.category)}`}
                 >
@@ -140,7 +207,10 @@ function App() {
                 <a href={fact.source} target="_blank" className="source">
                   (source)
                 </a>
-                <button className="like-button">
+                <button
+                  onClick={() => incrementlikes(fact._id)}
+                  className="like-button"
+                >
                   <img
                     src="/src/assets/thumbs up.png"
                     alt="Thumbs Up"
@@ -148,7 +218,10 @@ function App() {
                   />{" "}
                   <span className="like-count">{fact.likeCount}</span>
                 </button>
-                <button className="mind-button">
+                <button
+                  onClick={() => incrementmindemoji(fact._id)}
+                  className="mind-button"
+                >
                   <img
                     src="/src/assets/mind blowing.png"
                     alt="mind blowing"
@@ -156,7 +229,10 @@ function App() {
                   />{" "}
                   <span className="mind-count">{fact.mindBlownCount}</span>
                 </button>
-                <button className="false-button">
+                <button
+                  onClick={() => incrementfalsecount(fact._id)}
+                  className="false-button"
+                >
                   <img
                     src="/src/assets/false.png"
                     alt="false"
