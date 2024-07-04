@@ -288,13 +288,17 @@ p.category-text {
 }
 .fact-form {
   background-color: #292524;
-  height: 22rem;
+  height: 28rem;
   width: 60rem;
   padding: 2rem;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+}
+.fact-form h1 {
+  font-family: "Coiny", cursive;
+  color: rgb(173, 169, 169);
 }
 #desc {
   background-color: #292524;

@@ -48,6 +48,7 @@ function App() {
       </div>
       {sharebtn === true ? (
         <div className="fact-form">
+          <h1>SHARE YOUR FACTS WITH US!!</h1>
           <textarea
             name="desc"
             id="desc"
