@@ -106,7 +106,6 @@ function App() {
   const handleSourceChange = (e) => {
     setFactSource(e.target.value);
   };
-
   const handlepostfact = async () => {
     if (!factDescription || !factSource || !ncategory) {
       alert("Please fill out all fields.");
@@ -421,7 +420,7 @@ function App() {
                 {facts.map((fact, index) => (
                   <div key={index}>
                     {selectedcategory === fact.category.toLowerCase() ? (
-                      <div className="card">
+                      <div className="filtered-card">
                         <p
                           className={`category-text ${getCategoryClass(
                             fact.category
@@ -437,7 +436,10 @@ function App() {
                         >
                           (source)
                         </a>
-                        <button className="like-button">
+                        <button
+                          onClick={() => incrementlikes(fact._id)}
+                          className="like-button"
+                        >
                           <img
                             src="/src/assets/thumbs up.png"
                             alt="Thumbs Up"
@@ -445,7 +447,10 @@ function App() {
                           />{" "}
                           <span className="like-count">{fact.likeCount}</span>
                         </button>
-                        <button className="mind-button">
+                        <button
+                          onClick={() => incrementmindemoji(fact._id)}
+                          className="mind-button"
+                        >
                           <img
                             src="/src/assets/mind blowing.png"
                             alt="mind blowing"
@@ -455,7 +460,10 @@ function App() {
                             {fact.mindBlownCount}
                           </span>
                         </button>
-                        <button className="false-button">
+                        <button
+                          onClick={() => incrementfalsecount(fact._id)}
+                          className="false-button"
+                        >
                           <img
                             src="/src/assets/false.png"
                             alt="false"

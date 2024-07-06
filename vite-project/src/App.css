@@ -12,6 +12,7 @@ body {
 .header {
   margin-bottom: 6rem;
 }
+
 .logo {
   height: 90px;
   position: absolute;
@@ -71,7 +72,6 @@ body {
   flex-wrap: wrap;
   gap: 20px;
 }
-
 .card {
   background-color: #292524;
   border-bottom-left-radius: 20px;
@@ -85,7 +85,12 @@ body {
   flex: 0 1 calc(33.333% - 20px);
   position: relative;
 }
-
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 1 75%;
+    width: 20rem;
+  }
+}
 p.desc {
   text-align: center;
   font-family: "Wittgenstein", serif;
@@ -266,6 +271,12 @@ p.category-text {
   height: 110px;
   justify-content: center;
 }
+@media (max-width: 1200px) {
+  .choice {
+    height: 34rem;
+    width: 50%;
+  }
+}
 .categories {
   list-style-type: none;
   display: flex;
@@ -281,6 +292,15 @@ p.category-text {
   color: black;
   width: 10rem;
   font-size: large;
+}
+@media (max-width: 1200px) {
+  .categories {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .categories li {
+    padding: 0px;
+  }
 }
 .categories li:hover {
   cursor: pointer;
@@ -328,9 +348,23 @@ p.category-text {
 }
 .h2-text {
   font-family: "Coiny", cursive;
+  margin-bottom: 0px;
 }
 .filtered-facts {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
+  flex-direction: column;
+}
+.filtered-card {
+  background-color: #292524;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 12rem;
+  width: 99%;
+  padding: 8px;
+  box-sizing: border-box;
+  position: relative;
 }
