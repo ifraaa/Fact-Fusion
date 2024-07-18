@@ -10,7 +10,11 @@ body {
   background-color: rgba(0, 0, 0, 0.904);
 }
 .header {
-  margin-bottom: 6rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -19,19 +23,16 @@ body {
   left: 22px;
   top: 22px;
 }
+
 .learned {
-  position: absolute;
   color: white;
-  left: 7rem;
-  top: 24px;
   font-family: "Coiny", cursive;
   font-weight: 1200;
+  margin-left: 10rem; /* Adjusted to prevent overlap with the logo */
 }
+
 .share-btn {
-  position: absolute;
   height: 40px;
-  right: 7rem;
-  top: 3rem;
   font-family: "Coiny", cursive;
   font-weight: 1200;
   color: white;
@@ -43,7 +44,38 @@ body {
   background-image: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
   transition: background 0.3s, transform 0.3s;
   border: none;
+  position: absolute;
+  right: 7rem;
+  top: 3rem;
 }
+
+@media (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+
+  .logo {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .learned {
+    margin-left: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .share-btn {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+}
+
 .post-btn {
   font-family: "Coiny", cursive;
   font-weight: 1200;
@@ -60,6 +92,16 @@ body {
   background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
   transform: scale(1.05);
   cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .post-btn {
+    margin-top: 10px;
+  }
+  .post-btn:hover {
+    background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
 }
 .share-btn:hover {
   background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
@@ -89,6 +131,7 @@ body {
   .card {
     flex: 0 1 75%;
     width: 20rem;
+    margin: auto;
   }
 }
 p.desc {
@@ -275,13 +318,17 @@ p.category-text {
   .choice {
     height: 34rem;
     width: 50%;
+    margin-top: 10px;
+    margin: auto;
   }
 }
+
 .categories {
   list-style-type: none;
   display: flex;
   justify-content: center;
 }
+
 .categories li {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -293,15 +340,19 @@ p.category-text {
   width: 10rem;
   font-size: large;
 }
+
 @media (max-width: 1200px) {
   .categories {
     flex-direction: column;
+    margin: auto;
     gap: 20px;
   }
   .categories li {
     padding: 0px;
+    margin: auto;
   }
 }
+
 .categories li:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -316,12 +367,14 @@ p.category-text {
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
+
 .fact-form h1 {
   font-family: "Coiny", cursive;
   color: rgb(173, 169, 169);
 }
-#desc {
-  background-color: #292524;
+
+#desc,
+#src {
   background-color: #473c3c;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -333,18 +386,20 @@ p.category-text {
   border: none;
   color: white;
 }
-#src {
-  border: none;
-  background-color: #292524;
-  background-color: #473c3c;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  width: 50rem;
-  margin-top: 30px;
-  padding: 1rem;
-  color: white;
+@media (max-width: 1200px) {
+  #desc,
+  #src {
+    width: 90%;
+  }
+  .fact-form {
+    width: 90%;
+    height: 58rem;
+  }
+  .h2-text {
+    font-family: "Coiny", cursive;
+    margin-bottom: 0px;
+    margin: auto;
+  }
 }
 .h2-text {
   font-family: "Coiny", cursive;
